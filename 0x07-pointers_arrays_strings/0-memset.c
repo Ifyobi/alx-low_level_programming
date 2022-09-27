@@ -1,16 +1,20 @@
-cat > _putchar.c
-
 #include "main.h"
-#include <unistd.h>
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
+ * _memset - fills a memory block with a constant byte
+ * @s: address to memory block
+ * @b: char to be used
+ * @n: number of bytes to be used
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
+ * Return: pointer to the memory block
+ * /
+ 
+char *_memset(char *s, char b, unsigned int n)
 {
-	return (write(1, &c, 1));
+	while (n)
+	{
+		s[n - 1] = b;
+		n--;
+	}
+	return (s);
 }
