@@ -21,7 +21,7 @@ if (argc > 0)
 while (count < argc)
 {
 printf("%s\n", argv[count]);
-coun++;
+count++;
 }
 }
 return (0);
